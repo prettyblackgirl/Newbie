@@ -1,0 +1,168 @@
+/*Second code from scratch! with this one enter your day and month of birth so 
+I can tell you what is your astrological sign!
+I'M A NEWB! I'M SURE I HAVE TO MANY LINES BUT 
+I DON'T HAVE ENOUGH KNOWLEDGE!!
+FEEL FREE TO HELP ME OUT ON THIS ONE! (loop etc...)
+I know it is bad to use "exit(0)" but I dont understand the other things yet*/
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	
+int month;
+int day;
+
+cin >> day;
+cin >> month;
+
+
+// Invalid inputs!!!
+if(month > 12 || month < 1)//impossible month
+{
+   cout <<  "This is invalid. Please enter the number that represents your days of birth then the number that represent the month you were born.";
+   exit(0);
+}
+if(day > 31 || day < 1)//impossible day
+{
+    cout <<  "This is invalid. Please enter the number that represents your days of birth then the number that represent the month you were born.";
+    exit(0);
+}
+if(month == 4 || month == 6 || month == 9 || month == 10 && day > 30)//month with only 30 days
+{
+    cout <<  "This is invalid. Please enter the number that represents your days of birth then the number that represents the month you were born.";
+    exit(0);
+}
+if(month == 2 && day > 29)//february can't have more than 29 days
+{
+    cout <<  "This is invalid. Please enter the number that represents your days of birth then the number that represent the month you were born.";
+    exit(0);
+}
+//Invalid inputs!!!
+
+
+
+//January
+if(month ==1 && day <= 19 )
+{
+	cout << "You are a Capricorn";
+}
+if(month ==1 && day >= 20)
+{
+	cout << "You are an Aquarius";	
+}
+
+//February
+if(month ==2 && day <= 18)
+{
+	cout << "You are an Aquarius";	
+}
+if(month ==2 && day >= 19)
+{
+	cout << "You are a Pisces";
+}
+
+//March
+if(month == 3 && day <=20)
+{
+	cout << "You are an Aries";
+}
+if(month == 3 && day >= 21)
+{
+	cout << "You are a Pisces";
+}
+
+//April
+if(month == 4 && day <= 19)
+{
+	cout << "You are an Aries";
+}
+if(month == 4 && day >= 20)
+{
+	cout << "You are a Taurus";
+}
+
+//May
+if(month == 5 && day <= 20)
+{
+	cout << "You are a Taurus";
+}
+if(month == 5 && day >= 21)
+{
+	cout << "You are a Gemini";
+}
+
+//June
+if(month == 6 && day <= 20)
+{
+	cout << "You are a Gemini";
+}
+if(month == 6 && day >= 21)
+{
+	cout << "You are a Cancer";
+}
+
+//July
+if(month == 7 && day <= 22)
+{
+    cout << "You are a Cancer";
+}
+if(month == 7 && day >= 23)
+{
+    cout << "You are a Leo";
+}
+
+//August
+if(month == 8 && day <= 22)
+{
+    cout << "You are a Leo";
+}
+if(month == 8 && day >= 23)
+{
+    cout << "You are a Virgo";
+}
+
+//September
+if(month == 9 && day <= 22)
+{
+    cout << "You are a Virgo";
+}
+if(month == 9 && day >= 23)
+{
+    cout << "You are a Libra";
+}
+
+//October
+if(month == 10 && day <= 22)
+{
+    cout << "You are a Libra";
+}
+if(month == 10 && day >= 23)
+{
+    cout << "You are a Scorpio";
+}
+
+//November
+if(month == 11 && day <= 21)
+{
+    cout << "You are a Scorpio";
+}
+if(month == 11 && day >= 22)
+{
+    cout << "You are a Sagittarius";
+}
+
+//December
+if(month == 12 && day <= 21)
+{
+    cout << "You are a Sagittarius";
+}
+if(month == 12 && day >= 22)
+{
+    cout << "You are a Capricorn";
+}
+
+	return 0;
+}
+
